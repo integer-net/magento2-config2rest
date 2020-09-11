@@ -1,4 +1,4 @@
-# IntegerNet_Config2rest Magento Module
+# IntegerNet_Config2Rest Magento Module
 <div align="center">
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
