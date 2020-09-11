@@ -15,12 +15,12 @@
             "registration.php"
         ],
         "psr-4": {
-            "IntegerNet\\Config2rest\\": "src"
+            "IntegerNet\\ConfigToRest\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "IntegerNet\\Config2rest\\": "tests/src"
+            "IntegerNet\\ConfigToRest\\": "tests/src"
         }
     },
     "repositories": [
