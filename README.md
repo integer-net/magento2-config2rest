@@ -29,7 +29,62 @@ Enables Magento Editors to expose custom config path values via REST API
 
 ## Configuration
 
-## Usage
+Go to
+
+`Stores > Configurations > Services > Config to REST`
+
+and add an item for every config path you'd like to expose. 
+
+Notation example: `contact/email/recipient_email`
+
+## API 
+
+### Config path as object tree (default)
+
+- Call `en/V1/configtorest`
+- Method `GET`
+
+**Please note that `en` before `/V1/` is store code. It is important to specify it.**
+
+#### Returns:
+
+Example path: `contact/email/recipient_email`
+
+JSON Object
+
+```json
+{ 
+  "config": {
+    "contact": {
+      "email": {
+        "recipient_email": "john.doe@my-domain.com"
+      }
+    }
+  }
+}
+```
+
+### Config path as "flat" key/value pairs 
+
+- Call `en/V1/configtorest/flat`
+- Method `GET`
+
+**Please note that `en` before `/V1/` is store code. It is important to specify it.**
+
+#### Returns:
+
+Example path: `contact/email/recipient_email`
+
+JSON Object
+
+```json
+{ 
+  "config": {
+    "contact/email/recipient_email": "john.doe@my-domain.com"
+  }
+}
+
+```
 
 ## Changelog
 

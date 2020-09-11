@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="configtorest" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="0" showInStore="1">
+            <label>Config to REST</label>
+            <tab>service</tab>
+            <resource>IntegerNet_ConfigToRest::configuration</resource>
+            <group id="setup" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="1">
+                <label>Config to REST</label>
+                <field id="paths" translate="label" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="2">
+                    <label>Magento Config Paths</label>
+                    <frontend_model>IntegerNet\ConfigToRest\Block\Adminhtml\Form\Field\Setup</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <comment>Values of the paths defined here will be exposed via public api.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
